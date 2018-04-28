@@ -1,7 +1,11 @@
 package xyz.prgrm.paste;
 
-public class CopyPasteManager {
-    public static void main(String[] args) {
+import javafx.application.Application;
+import javafx.stage.Stage;
 
+
+public class CopyPasteManager {
+
+    public static void main(String[] args) {
     }
 }
