@@ -1,7 +1,6 @@
 package xyz.prgrm.paste;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
+import xyz.prgrm.paste.managers.GenericManagerMode;
 import xyz.prgrm.paste.models.GenericDS;
 import xyz.prgrm.paste.models.ModeConfiguration;
 

@@ -1,5 +1,6 @@
-package xyz.prgrm.paste;
+package xyz.prgrm.paste.managers;
 
+import xyz.prgrm.paste.Utils;
 import xyz.prgrm.paste.models.GenericDS;
 
 public class GenericManagerMode extends Thread {
