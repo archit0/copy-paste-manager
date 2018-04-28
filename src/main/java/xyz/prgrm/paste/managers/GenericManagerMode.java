@@ -1,9 +1,10 @@
 package xyz.prgrm.paste.managers;
 
+import xyz.prgrm.paste.TaskClass;
 import xyz.prgrm.paste.Utils;
 import xyz.prgrm.paste.models.GenericDS;
 
-public class GenericManagerMode extends Thread {
+public class GenericManagerMode extends TaskClass {
 
     private GenericDS<String> genericDS;
 
@@ -11,7 +12,7 @@ public class GenericManagerMode extends Thread {
         this.genericDS = genericDS;
     }
 
-
+    @Override
     public void run() {
         while (true) {
             String cpText = Utils.getClipBoardText();
