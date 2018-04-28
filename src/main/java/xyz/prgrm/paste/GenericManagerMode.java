@@ -1,23 +1,26 @@
 package xyz.prgrm.paste;
 
 import xyz.prgrm.paste.models.GenericDS;
-import xyz.prgrm.paste.models.ModeConfiguration;
 
-public class GenericManagerMode {
+public class GenericManagerMode extends Thread {
 
     private GenericDS<String> genericDS;
+
     public GenericManagerMode(GenericDS<String> genericDS) {
         this.genericDS = genericDS;
     }
 
-    public void start() {
-//        String last = "";
-//        while (true) {
-//            String current = Utils.getClipBoardText();
-//            if (current.length() > 0 && !current.equals(last)){
-//                if ()
-//            }
-//        }
-    }
 
+    public void run() {
+        while (true) {
+            String cpText = Utils.getClipBoardText();
+            if (cpText != null) {
+                boolean ins = this.genericDS.insert(cpText);
+                if (ins) {
+                    System.out.println("Inserted One");
+                }
+            }
+
+        }
+    }
 }

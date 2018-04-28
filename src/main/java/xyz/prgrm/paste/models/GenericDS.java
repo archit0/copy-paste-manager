@@ -33,8 +33,9 @@ public class GenericDS<ListType> {
         boolean sameAllowed = ModeConfiguration.isAllowDuplicated();
 
         ListType lastData = storeSize == 0 ? null : this.dataStore.get(storeSize - 1);
-        boolean same = lastData.equals(data);
-        if (!lastData.equals(data) || sameAllowed) {
+        boolean same = data.equals(lastData);
+        if (!same || sameAllowed) {
+            this.dataStore.add(data);
             int size = this.dataStore.size();
             // Removing Overflow than the maximum size allowed
             if (size > dsSize) {
