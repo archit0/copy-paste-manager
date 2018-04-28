@@ -37,8 +37,12 @@ public class CopyPasteManager extends Application {
         stage.setMaxHeight(0);
         stage.setMaxWidth(0);
         stage.setX(Double.MAX_VALUE);
+        CopyPasteManager.setIconScene(stage);
+    }
+
+    public static void setIconScene(Stage stage) throws Exception{
         FXMLLoader fxmlLoader = new FXMLLoader();
-        fxmlLoader.setLocation(getClass().getResource("/icon.fxml"));
+        fxmlLoader.setLocation(CopyPasteManager.class.getResource("/icon.fxml"));
 
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
@@ -47,7 +51,5 @@ public class CopyPasteManager extends Application {
         stage.setAlwaysOnTop(true);
         IconController iconController = (IconController) fxmlLoader.getController();
         iconController.setStage(stage);
-
-
     }
 }

@@ -4,13 +4,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-
 <VBox fx:id="MAIN_L" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.prgrm.paste.controllers.IconController">
-   <children>
-      <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@paste-icon.png" />
-         </image>
-      </ImageView>
-   </children>
+    <children>
+        <ImageView fx:id="IMG_VIEW" fitHeight="25.0" fitWidth="25.0" onMouseClicked="#toggle" onMouseExited="#drag" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@paste-icon.png" />
+            </image>
+        </ImageView>
+    </children>
 </VBox>
